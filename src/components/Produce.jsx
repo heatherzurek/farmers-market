@@ -20,9 +20,9 @@ function Produce(props) {
       <h3>
         {props.selection.map((item, index) => {
           if (index === props.selection.length - 1) {
-            return <span>{item}.</span>
+            return <span>{item}.</span>;
           } else {
-            return <span>{item}, </span>
+            return <span>{item}, </span>;
           }
         }
         )}

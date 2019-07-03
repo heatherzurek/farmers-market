@@ -2,6 +2,7 @@ import React from 'react';
 import Schedule from './Schedule';
 import Header from './Header';
 import SeasonalProduce from './SeasonalProduce';
+import { Switch, Route } from 'react-router-dom';
 
 
 function App() {
@@ -16,8 +17,10 @@ function App() {
         }
       `}</style>
       <Header />
-      <Schedule />
-      <SeasonalProduce />
+      <Switch>
+        <Route exact path='/' component={Schedule} />
+        <Route path='/produce' component={SeasonalProduce} />
+      </Switch>
     </div>
   );
 }
